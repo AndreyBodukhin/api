@@ -1319,17 +1319,15 @@ Location: /resumes/0123456789abcdef
     "errors": [
         {
             "type": "bad_json_data",
-            "value": "education",
-            "reason": "condition_error",
-            "code": "min_value",
+            "value": "condition_error",
+            "reason": "min_value",
             "description": "Значение ниже допустимого",
             "pointer": "/education/additional/1/year"
         },
         {
             "type": "bad_json_data",
-            "value": "email",
-            "reason": "business_logic_error",
-            "code": "email_blacklisted",
+            "value": "business_logic_error",
+            "reason": "email_blacklisted",
             "description": "email находится в черном списке",
             "pointer": "/email"
         }
@@ -1340,9 +1338,8 @@ Location: /resumes/0123456789abcdef
 Имя | Тип | Описание
 --- | --- | ---
 type | string | Класс ошибки (всегда принимает значение `bad_json_data`)
-value | string | Название верхнеуровнего поля с ошибкой во входящем сообщении
-reason | string | Тип ошибки валидации (`condition_error` - ошибка типа, формата и правил использования поля, `business_logic_error` - ошибка бизнес логики)
-code | string | Код ошибки валидации
+reason | string | Причина ошибки
+value | string | Тип ошибки валидации (`condition_error` - ошибка типа, формата и правил использования поля, `business_logic_error` - ошибка бизнес логики)
 description | string | Описание ошибки для пользователя
 pointer | string | [Указатель на данные](#error-pointer) с ошибкой во входящем сообщении
 
